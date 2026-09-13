@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============================================================
+     SEO BÁSICO
+     ============================================================ -->
+<title>Clínica La Bella Estética | Dra. Lorrene Barroco — Manaus/AM</title>
+<meta name="description" content="Harmonização facial e depilação a laser em Manaus com a Dra. Lorrene Barroco. Atendimento humanizado, acessível e sem dor. Agende sua avaliação pelo WhatsApp.">
+<meta name="keywords" content="clínica de estética Manaus, harmonização facial Manaus, depilação a laser Manaus, Dra. Lorrene Barroco, estética avançada">
+<meta name="author" content="Clínica La Bella Estética">
+<link rel="canonical" href="https://www.labellaestetica.com.br/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Clínica La Bella Estética | Dra. Lorrene Barroco">
+<meta property="og:description" content="Harmonização facial e depilação a laser em Manaus. Atendimento humanizado, acessível e sem dor.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="La Bella Estética">
+
+<!-- Dados estruturados (SEO local) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Clínica La Bella Estética",
+  "image": "",
+  "description": "Clínica de estética avançada especializada em harmonização facial e depilação a laser, com atendimento humanizado e acessível em Manaus/AM.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Gabriel Corrêa Pedrosa, 398 - Parque Dez de Novembro",
+    "addressLocality": "Manaus",
+    "addressRegion": "AM",
+    "postalCode": "69055-748",
+    "addressCountry": "BR"
+  },
+  "telephone": "+55 92 98182-2850",
+  "medicalSpecialty": "Estética Avançada",
+  "priceRange": "$$"
+}
+</script>
+
+<!-- ============================================================
+     FONTES — Playfair Display (títulos) + Plus Jakarta Sans (corpo)
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Chart.js (gráfico radar da seção Diferenciais) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.3/chart.umd.min.js"></script>
+
+<style>
+/* ============================================================
+   1. TOKENS — cores, tipografia, espaçamento, raios
+   (extraídos do Guia de Direção Visual do cliente)
+   ============================================================ */
+:root{
+  --bg:            #FAF5F2; /* soft cream / nude claro */
+  --surface:       #FFFFFF; /* branco puro */
+  --text:          #3D2215; /* marrom espresso */
+  --text-soft:     #754934; /* marrom terracota suave */
+  --gold:          #C59B27; /* dourado champagne */
+  --border:        #E8D5CB; /* nude rosado leve */
+  --cta:           #25D366; /* verde esmeralda conversão */
+  --cta-hover:     #1EBE5D;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-pill: 999px;
+
+  --shadow-soft: 0 10px 30px rgba(61, 34, 21, 0.06);
+  --shadow-lift: 0 16px 40px rgba(61, 34, 21, 0.12);
+
+  --container: 1160px;
+  --header-h: 84px;
+}
+
+/* ============================================================
+   2. RESET
+   ============================================================ */
+*, *::before, *::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+body, h1, h2, h3, h4, p, ul, figure{ margin: 0; }
+ul{ padding: 0; list-style: none; }
+img{ max-width: 100%; display: block; }
+a{ color: inherit; text-decoration: none; }
+button{ font: inherit; cursor: pointer; border: none; background: none; }
+input, select, textarea{ font: inherit; }
+
+body{
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4{
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+:focus-visible{
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
+
+/* ============================================================
+   3. LAYOUT UTILITIES
+   ============================================================ */
+.container{
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.section{ padding-block: 96px; }
+.section--tight{ padding-block: 64px; }
+
+.section-head{
+  max-width: 620px;
+  margin-bottom: 48px;
+}
+.section-head.center{ margin-inline: auto; text-align: center; }
+
+.eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.section-head h2{
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 14px;
+}
+
+.section-head p{
+  color: var(--text-soft);
+  font-size: 17px;
+}
+
+/* ============================================================
+   4. BOTÕES
+   ============================================================ */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 16px;
+  min-height: 52px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary{
+  background: var(--cta);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(37, 211, 102, 0.28);
+}
+.btn-primary:hover, .btn-primary:focus-visible{
+  background: var(--cta-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(37, 211, 102, 0.36);
+}
+
+.btn-secondary{
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--text);
+}
+.btn-secondary:hover, .btn-secondary:focus-visible{
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn-icon svg{ width: 20px; height: 20px; flex-shrink: 0; }
+
+/* ============================================================
+   5. HEADER
+   ============================================================ */
+.header{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  background: rgba(250, 245, 242, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.header.is-scrolled{
+  border-bottom-color: var(--border);
+  box-shadow: 0 4px 20px rgba(61, 34, 21, 0.04);
+}
+
+.header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo{
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.logo span{ color: var(--gold); }
+
+.nav{
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.nav a{
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-soft);
+  position: relative;
+  padding-block: 4px;
+}
+.nav a:hover{ color: var(--text); }
+.nav a::after{
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0;
+  height: 1.5px;
+  background: var(--gold);
+  transition: width 0.25s ease;
+}
+.nav a:hover::after{ width: 100%; }
+
+.header-actions{ display: flex; align-items: center; gap: 16px; }
+.header .btn-primary{ padding: 12px 22px; min-height: 44px; font-size: 14.5px; }
+
+.nav-toggle{
+  display: none;
+  width: 44px; height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+.nav-toggle svg{ width: 24px; height: 24px; }
+.nav-toggle .icon-close{ display: none; }
+.nav-toggle.is-open .icon-open{ display: none; }
+.nav-toggle.is-open .icon-close{ display: block; }
+
+/* ============================================================
+   6. HERO
+   ============================================================ */
+.hero{
+  position: relative;
+  padding-top: calc(var(--header-h) + 72px);
+  padding-bottom: 88px;
+  overflow: hidden;
+}
+
+.hero-glow{
+  position: absolute;
+  top: -120px; right: -140px;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197,155,39,0.16), rgba(197,155,39,0) 70%);
+  pointer-events: none;
+}
+
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-content{
+  opacity: 0;
+  transform: translateY(14px);
+  animation: heroIn 0.7s ease forwards;
+}
+@keyframes heroIn{ to{ opacity: 1; transform: translateY(0); } }
+
+.hero h1{
+  font-size: clamp(30px, 4.6vw, 54px);
+  margin-bottom: 22px;
+  max-width: 15ch;
+}
+
+.hero-sub{
+  font-size: 18px;
+  color: var(--text-soft);
+  max-width: 46ch;
+  margin-bottom: 34px;
+}
+
+.hero-ctas{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.trust-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 44px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.trust-item{
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+.trust-item svg{ width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
+
+.hero-visual{
+  position: relative;
+  opacity: 0;
+  animation: heroIn 0.8s ease 0.15s forwards;
+}
+.hero-photo{
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(197,155,39,0.20), transparent 55%),
+    linear-gradient(160deg, #EFE1D6, #E4CFC0);
+  box-shadow: var(--shadow-lift);
+  position: relative;
+  overflow: hidden;
+}
+.photo-fill{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.hero-photo-caption{
+  position: absolute;
+  bottom: 20px; left: 20px; right: 20px;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+/* ============================================================
+   7. SOBRE (DRA. LORRENE)
+   ============================================================ */
+.about-grid{
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-photo{
+  aspect-ratio: 1 / 1.05;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, #FFFFFF, #F1E4DA);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-credentials{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.credential-pill{
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.about-text p{
+  color: var(--text-soft);
+  font-size: 16.5px;
+  margin-bottom: 18px;
+}
+.about-text p:last-of-type{ margin-bottom: 0; }
+
+/* ============================================================
+   8. COMO FUNCIONA (etapas — sequência real, numeração cabível)
+   ============================================================ */
+.steps{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.step-card{
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-soft);
+}
+.step-number{
+  font-family: var(--font-display);
+  font-size: 34px;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.step-card h3{ font-size: 19px; margin-bottom: 10px; }
+.step-card p{ color: var(--text-soft); font-size: 15px; }
+
+/* ============================================================
+   9. SERVIÇOS (abas)
+   ============================================================ */
+.tabs{
+  display: inline-flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 6px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 40px;
+  gap: 4px;
+}
+.tab-btn{
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--text-soft);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.tab-btn[aria-selected="true"]{
+  background: var(--text);
+  color: var(--bg);
+}
+
+.service-panel{ display: none; }
+.service-panel.is-active{ display: block; }
+
+.service-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.service-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.service-card:hover{
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+.service-card .icon-wrap{
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.service-card .icon-wrap svg{ width: 22px; height: 22px; color: var(--gold); }
+.service-card h3{ font-size: 17px; margin-bottom: 8px; }
+.service-card p{ font-size: 14.5px; color: var(--text-soft); }
+
+/* ============================================================
+   9.1 LOCALIZAÇÃO
+   ============================================================ */
+.location-grid{
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+}
+.location-address{
+  font-size: 17px;
+  color: var(--text-soft);
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+.location-hours{
+  font-size: 14.5px;
+  color: var(--text-soft);
+  margin-bottom: 28px;
+}
+.map-frame{
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ============================================================
+   10. DIFERENCIAIS (gráfico radar)
+   ============================================================ */
+.diff-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 48px;
+  box-shadow: var(--shadow-soft);
+}
+.diff-list{ display: flex; flex-direction: column; gap: 20px; }
+.diff-item{ display: flex; gap: 14px; align-items: flex-start; }
+.diff-item .dot{
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold);
+  margin-top: 8px; flex-shrink: 0;
+}
+.diff-item h4{ font-size: 15.5px; margin-bottom: 4px; }
+.diff-item p{ font-size: 14px; color: var(--text-soft); }
+.chart-wrap{ position: relative; height: 340px; }
+
+/* ============================================================
+   11. DEPOIMENTOS
+   ============================================================ */
+.testimonial-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testimonial-card{
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  border: 1px solid var(--border);
+}
+.stars{ display: flex; gap: 3px; margin-bottom: 16px; }
+.stars svg{ width: 16px; height: 16px; color: var(--gold); }
+.testimonial-card p{
+  font-size: 15px;
+  color: var(--text-soft);
+  margin-bottom: 20px;
+}
+.testimonial-author{
+  display: flex; align-items: center; gap: 12px;
+}
+.author-avatar{
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #EFE1D6, #E4CFC0);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-soft);
+  font-size: 15px;
+}
+.author-name{ font-size: 14.5px; font-weight: 700; }
+.author-detail{ font-size: 12.5px; color: var(--text-soft); }
+
+/* ============================================================
+   12. FAQ (accordion)
+   ============================================================ */
+.faq-list{ max-width: 760px; margin-inline: auto; }
+.faq-item{
+  border-bottom: 1px solid var(--border);
+}
+.faq-question{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 4px;
+  text-align: left;
+  font-size: 16.5px;
+  font-weight: 700;
+}
+.faq-question .chevron{
+  width: 20px; height: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+.faq-item.is-open .chevron{ transform: rotate(180deg); }
+.faq-answer{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-answer p{
+  padding: 0 4px 22px;
+  color: var(--text-soft);
+  font-size: 15px;
+  max-width: 62ch;
+}
+
+/* ============================================================
+   13. CTA FINAL
+   ============================================================ */
+.cta-final{
+  background: linear-gradient(160deg, #3D2215, #4A2A1B);
+  border-radius: var(--radius-lg);
+  padding: 64px 48px;
+  text-align: center;
+  color: #fff;
+}
+.cta-final h2{ color: #fff; font-size: clamp(26px, 3.6vw, 36px); margin-bottom: 14px; }
+.cta-final p{ color: rgba(255,255,255,0.72); max-width: 48ch; margin: 0 auto 32px; }
+
+/* ============================================================
+   14. FOOTER
+   ============================================================ */
+.footer{
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding-block: 64px 32px;
+}
+.footer-grid{
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.footer-brand p{ color: var(--text-soft); font-size: 14.5px; margin-top: 14px; max-width: 32ch; }
+.footer h4{ font-size: 14.5px; margin-bottom: 18px; }
+.footer-links li{ margin-bottom: 12px; }
+.footer-links a{ font-size: 14.5px; color: var(--text-soft); }
+.footer-links a:hover{ color: var(--gold); }
+.social-row{ display: flex; gap: 12px; margin-top: 18px; }
+.social-row a{
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+}
+.social-row a svg{ width: 17px; height: 17px; }
+.social-row a:hover{ background: var(--gold); border-color: var(--gold); color: #fff; }
+.footer-bottom{
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+/* ============================================================
+   15. BOTÃO FLUTUANTE DO WHATSAPP
+   ============================================================ */
+.whatsapp-float{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--cta);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 14.5px;
+  min-height: 48px;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.38);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.whatsapp-float:hover{ transform: translateY(-2px) scale(1.02); box-shadow: 0 16px 34px rgba(37, 211, 102, 0.44); }
+.whatsapp-float svg{ width: 22px; height: 22px; flex-shrink: 0; }
+.whatsapp-float .wa-text{ white-space: nowrap; }
+
+/* ============================================================
+   16. RESPONSIVO
+   ============================================================ */
+@media (max-width: 1024px){
+  .hero-grid, .about-grid, .location-grid{ grid-template-columns: 1fr; }
+  .hero-visual{ order: -1; max-width: 380px; margin-inline: auto; }
+  .about-photo{ max-width: 340px; margin-inline: auto; }
+  .steps, .service-grid, .testimonial-grid{ grid-template-columns: repeat(2, 1fr); }
+  .diff-grid{ grid-template-columns: 1fr; padding: 36px; }
+  .footer-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 720px){
+  :root{ --header-h: 72px; }
+  .section{ padding-block: 64px; }
+
+  .nav, .header-actions .btn-primary{ display: none; }
+  .nav-toggle{ display: flex; }
+
+  .nav.is-open{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--header-h); left: 0; right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 24px;
+    gap: 4px;
+    box-shadow: var(--shadow-soft);
+  }
+  .nav.is-open a{ padding: 14px 6px; font-size: 16px; border-bottom: 1px solid var(--border); }
+  .nav.is-open .btn-primary{ display: inline-flex; margin-top: 10px; }
+
+  .hero{ padding-top: calc(var(--header-h) + 40px); }
+  .hero-ctas{ flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn{ width: 100%; }
+  .trust-row{ flex-direction: column; gap: 14px; }
+
+  .steps, .service-grid, .testimonial-grid, .footer-grid{ grid-template-columns: 1fr; }
+  .diff-grid{ padding: 28px; }
+  .chart-wrap{ height: 280px; }
+
+  .tabs{ width: 100%; }
+  .tab-btn{ flex: 1; text-align: center; }
+
+  .cta-final{ padding: 48px 24px; }
+
+  .whatsapp-float .wa-text{ display: none; }
+  .whatsapp-float{ padding: 14px; width: 52px; height: 52px; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header" id="siteHeader">
+  <div class="container">
+    <a href="#inicio" class="logo">La Bella <span>Estética</span></a>
+
+    <nav class="nav" id="siteNav">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">Perguntas Frequentes</a>
+      <a href="#localizacao">Localização</a>
+      <a href="#contato" class="btn btn-primary btn-icon js-whatsapp-link">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.762.462 3.48 1.34 4.997l-1.42 5.19 5.312-1.394a9.96 9.96 0 0 0 4.765 1.214h.004c5.514 0 9.997-4.483 9.997-9.997s-4.483-9.997-9.997-9.997h-.004zm5.905 15.908a8.28 8.28 0 0 1-11.774 0 8.28 8.28 0 0 1 0-11.774 8.28 8.28 0 0 1 11.774 0 8.28 8.28 0 0 1 0 11.774z"/></svg>
+        Agendar
+      </a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNav">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="inicio">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+        <h1>Realce a sua beleza natural com o conforto, a segurança e a elegância que você merece</h1>
+
+        <p class="hero-sub">
+          Na Clínica La Bella Estética, a Dra. Lorrene Barroco alia tecnologia avançada em
+          harmonização facial e depilação a laser a um atendimento 100% humanizado e sem dor.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#" class="btn btn-primary btn-icon js-whatsapp-link" data-wa-message="agendar">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.762.462 3.48 1.34 4.997l-1.42 5.19 5.312-1.394a9.96 9.96 0 0 0 4.765 1.214h.004c5.514 0 9.997-4.483 9.997-9.997s-4.483-9.997-9.997-9.997h-.004zm5.905 15.908a8.28 8.28 0 0 1-11.774 0 8.28 8.28 0 0 1 0-11.774 8.28 8.28 0 0 1 11.774 0 8.28 8.28 0 0 1 0 11.774z"/></svg>
+            Agendar Minha Avaliação ➔
+          </a>
+          <a href="#servicos" class="btn btn-secondary">Simular Tratamento</a>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z" stroke-linejoin="round" stroke-linecap="round"/></svg>
+            Atendimento com hora marcada
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="5" r="2"/><path d="M12 7v5m0 0l-4 8m4-8l4 8m-8-3h8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Estrutura 100% acessível
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.35-9.5-8.5C.8 8.9 2.4 5 6 5c2 0 3.5 1.2 4 2.2C10.5 6.2 12 5 14 5c3.6 0 5.2 3.9 3.5 7.5C19 16.65 12 21 12 21z" stroke-linejoin="round"/></svg>
+            Sem dor
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo">
+          <img src="dra-lorrene-barroco.png" alt="Dra. Lorrene Barroco, especialista em estética avançada" class="photo-fill">
+          <div class="hero-photo-caption">Dra. Lorrene Barroco · Clínica La Bella Estética</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SOBRE A DRA. LORRENE
+       ============================================================ -->
+  <section class="section" id="sobre">
+    <div class="container about-grid">
+
+      <div class="about-photo">
+        <img src="dra-lorrene-barroco.png" alt="Dra. Lorrene Barroco, especialista em estética avançada" class="photo-fill">
+      </div>
+
+      <div class="about-text">
+        <span class="eyebrow">Sobre a especialista</span>
+        <h2>Dra. Lorrene Barroco</h2>
+        <p>
+          Com uma abordagem que une tecnologia de ponta a um olhar cuidadoso e humano,
+          a Dra. Lorrene Barroco desenvolveu a Clínica La Bella Estética para ser um espaço
+          onde cada paciente é ouvido antes de qualquer procedimento ser indicado.
+        </p>
+        <p>
+          A proposta é simples: nada de fórmulas prontas. Cada plano de harmonização facial
+          ou protocolo de depilação a laser é pensado a partir do que faz sentido para a sua
+          pele, sua rotina e o resultado natural que você busca.
+        </p>
+        <div class="about-credentials">
+          <span class="credential-pill">Estética Avançada</span>
+          <span class="credential-pill">Harmonização Facial</span>
+          <span class="credential-pill">Depilação a Laser</span>
+          <span class="credential-pill">Atendimento Humanizado</span>
+        </div>
+        <!-- EDITAR: inclua aqui registro profissional, formações e certificações reais -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COMO FUNCIONA
+       ============================================================ -->
+  <section class="section section--tight" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" style="justify-content:center; display:flex;">Como funciona</span>
+        <h2>Do primeiro contato ao seu tratamento</h2>
+        <p>Um caminho simples, sem burocracia e com hora marcada.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Fale com a gente no WhatsApp</h3>
+          <p>Conte o que você busca e tire suas dúvidas diretamente com nossa equipe em Manaus.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Agende sua avaliação</h3>
+          <p>Em consultório, a Dra. Lorrene avalia sua pele e monta um plano sob medida para você.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Comece seu tratamento</h3>
+          <p>Sessões com hora marcada, ambiente acolhedor e acompanhamento em cada etapa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVIÇOS
+       ============================================================ -->
+  <section class="section" id="servicos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Nossos serviços</span>
+        <h2>Tratamentos pensados para o seu tipo de pele</h2>
+        <p>Explore as categorias abaixo e simule o tratamento ideal para você.</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Categorias de serviços">
+        <button class="tab-btn" role="tab" aria-selected="true" aria-controls="panel-facial" id="tab-facial" data-panel="panel-facial">Harmonização Facial</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-laser" id="tab-laser" data-panel="panel-laser">Depilação a Laser</button>
+      </div>
+
+      <div class="service-panel is-active" id="panel-facial" role="tabpanel" aria-labelledby="tab-facial">
+        <div class="service-grid">
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 4.9L20 8l-4 3.9.9 5.6L12 15l-4.9 2.5.9-5.6L4 8l5.6-1.1z" stroke-linejoin="round"/></svg></div>
+            <h3>Toxina Botulínica</h3>
+            <p>Suaviza linhas de expressão preservando a naturalidade dos movimentos do rosto.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.35-9.5-8.5C.8 8.9 2.4 5 6 5c2 0 3.5 1.2 4 2.2C10.5 6.2 12 5 14 5c3.6 0 5.2 3.9 3.5 7.5C19 16.65 12 21 12 21z" stroke-linejoin="round"/></svg></div>
+            <h3>Preenchimento Labial</h3>
+            <p>Volume e contorno equilibrados, respeitando a proporção natural do seu sorriso.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2" stroke-linecap="round"/></svg></div>
+            <h3>Bioestimulador de Colágeno</h3>
+            <p>Estimula a produção natural de colágeno para firmeza e viço da pele ao longo do tempo.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16M12 4v16" stroke-linecap="round"/></svg></div>
+            <h3>Preenchimento de Sulco Nasogeniano</h3>
+            <p>Suaviza sulcos marcados, trazendo um aspecto mais descansado ao rosto.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3m0 12v3m9-9h-3M6 12H3m14.5-6.5l-2.1 2.1M8.6 15.4l-2.1 2.1m0-11l2.1 2.1m6.8 6.8l2.1 2.1" stroke-linecap="round"/></svg></div>
+            <h3>Skinbooster</h3>
+            <p>Hidratação profunda que devolve luminosidade e textura uniforme à pele.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h10" stroke-linecap="round"/></svg></div>
+            <h3>Fios de PDO</h3>
+            <p>Efeito lifting sem cirurgia, com sustentação progressiva e resultado gradual.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-panel" id="panel-laser" role="tabpanel" aria-labelledby="tab-laser">
+        <div class="service-grid">
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+            <h3>Depilação a Laser Facial</h3>
+            <p>Buço, queixo e contorno do rosto com pele livre de pelos e sem irritação.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.35-9.5-8.5C.8 8.9 2.4 5 6 5c2 0 3.5 1.2 4 2.2C10.5 6.2 12 5 14 5c3.6 0 5.2 3.9 3.5 7.5C19 16.65 12 21 12 21z" stroke-linejoin="round"/></svg></div>
+            <h3>Axilas</h3>
+            <p>Sessões rápidas e confortáveis, com redução progressiva dos pelos.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 4.9L20 8l-4 3.9.9 5.6L12 15l-4.9 2.5.9-5.6L4 8l5.6-1.1z" stroke-linejoin="round"/></svg></div>
+            <h3>Virilha</h3>
+            <p>Protocolo pensado para o máximo conforto em uma região sensível.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16M12 4v16" stroke-linecap="round"/></svg></div>
+            <h3>Pernas Completas</h3>
+            <p>Cobertura completa com equipamento de alta performance para peles brasileiras.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2" stroke-linecap="round"/></svg></div>
+            <h3>Costas</h3>
+            <p>Sessões pensadas para áreas de difícil acesso, com resultado uniforme.</p>
+          </div>
+          <div class="service-card">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h10" stroke-linecap="round"/></svg></div>
+            <h3>Buço</h3>
+            <p>Uma das áreas mais procuradas, com sessões curtas e resultado visível.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DIFERENCIAIS (gráfico radar)
+       ============================================================ -->
+  <section class="section" id="diferenciais">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" style="justify-content:center; display:flex;">Diferenciais</span>
+        <h2>O que muda quando o cuidado é de verdade</h2>
+        <p>Comparamos a experiência La Bella Estética com o atendimento tradicional do mercado.</p>
+      </div>
+
+      <div class="diff-grid">
+        <div class="diff-list">
+          <div class="diff-item">
+            <span class="dot"></span>
+            <div>
+              <h4>Atendimento humanizado</h4>
+              <p>Cada consulta começa com escuta — você é ouvida antes de qualquer indicação.</p>
+            </div>
+          </div>
+          <div class="diff-item">
+            <span class="dot"></span>
+            <div>
+              <h4>Tecnologia avançada</h4>
+              <p>Equipamentos modernos para procedimentos mais seguros e resultados consistentes.</p>
+            </div>
+          </div>
+          <div class="diff-item">
+            <span class="dot"></span>
+            <div>
+              <h4>Conforto, sem dor</h4>
+              <p>Protocolos ajustados para minimizar o desconforto em cada sessão.</p>
+            </div>
+          </div>
+          <div class="diff-item">
+            <span class="dot"></span>
+            <div>
+              <h4>Estrutura acessível</h4>
+              <p>Recepção ampla e rampas de acesso pensadas para receber todas as pacientes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-wrap">
+          <canvas id="diffChart" role="img" aria-label="Gráfico radar comparando La Bella Estética com o atendimento tradicional"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DEPOIMENTOS
+       ============================================================ -->
+  <section class="section" id="depoimentos" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" style="justify-content:center; display:flex;">Depoimentos</span>
+        <h2>Quem já passou por aqui</h2>
+        <p>Experiências reais de pacientes atendidas na Clínica La Bella Estética.</p>
+      </div>
+
+      <!-- EDITAR: substitua pelos depoimentos reais e verificados das suas pacientes -->
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          </div>
+          <p>"Me senti acolhida desde o primeiro contato pelo WhatsApp. A Dra. Lorrene explicou tudo com calma antes de indicar qualquer procedimento."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A.</div>
+            <div>
+              <div class="author-name">Ana P.</div>
+              <div class="author-detail">Harmonização Facial</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          </div>
+          <p>"Fiz depilação a laser em outros lugares e doía muito. Aqui o protocolo é bem mais confortável e o ambiente é lindo."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M.</div>
+            <div>
+              <div class="author-name">Mariana S.</div>
+              <div class="author-detail">Depilação a Laser</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.6 1.4 6.8L12 17l-6.1 3.5 1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+          </div>
+          <p>"A estrutura é acessível de verdade, não só no discurso. Minha mãe usa cadeira de rodas e conseguiu se locomover sem dificuldade."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">C.</div>
+            <div>
+              <div class="author-name">Carla M.</div>
+              <div class="author-detail">Acompanhante</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" style="justify-content:center; display:flex;">Dúvidas frequentes</span>
+        <h2>Perguntas que recebemos com frequência</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item is-open">
+          <button class="faq-question">
+            A depilação a laser dói?
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>O procedimento costuma causar apenas um leve desconforto, comparável a um beliscão rápido. Ajustamos a intensidade do equipamento conforme a sensibilidade de cada pele.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Quantas sessões são necessárias?
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Varia de acordo com a região tratada e o tipo de pelo. Na avaliação inicial, a Dra. Lorrene monta um plano de sessões personalizado para o seu caso.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            A clínica é acessível para pessoas com deficiência?
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Sim. A recepção e as salas de atendimento contam com rampas de acesso e espaço amplo para circulação.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Preciso de avaliação antes de iniciar um procedimento?
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, sempre. Toda indicação de tratamento parte de uma avaliação individual com a Dra. Lorrene, para garantir segurança e um resultado natural.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Quais formas de pagamento a clínica aceita?
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Trabalhamos com Pix, cartão de crédito e débito, além de parcelamento em pacotes de sessões. Consulte as condições diretamente com nossa equipe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA FINAL
+       ============================================================ -->
+  <section class="section" id="contato">
+    <div class="container">
+      <div class="cta-final">
+        <h2>Pronta para dar o próximo passo no seu cuidado?</h2>
+        <p>Fale agora com a nossa equipe em Manaus e agende sua avaliação com a Dra. Lorrene Barroco.</p>
+        <a href="#" class="btn btn-primary btn-icon js-whatsapp-link" data-wa-message="agendar">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.762.462 3.48 1.34 4.997l-1.42 5.19 5.312-1.394a9.96 9.96 0 0 0 4.765 1.214h.004c5.514 0 9.997-4.483 9.997-9.997s-4.483-9.997-9.997-9.997h-.004zm5.905 15.908a8.28 8.28 0 0 1-11.774 0 8.28 8.28 0 0 1 0-11.774 8.28 8.28 0 0 1 11.774 0 8.28 8.28 0 0 1 0 11.774z"/></svg>
+          Agendar Minha Avaliação ➔
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LOCALIZAÇÃO
+       ============================================================ -->
+  <section class="section section--tight" id="localizacao" style="background:var(--surface); border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="location-grid">
+        <div>
+          <span class="eyebrow">Onde estamos</span>
+          <h2>Venha nos conhecer em Manaus</h2>
+          <p class="location-address">
+            Av. Gabriel Corrêa Pedrosa, 398 – Parque Dez de Novembro<br>
+            Manaus - AM, 69055-748, Brasil
+          </p>
+          <p class="location-hours">Seg. a Sáb. · 9h às 19h</p>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Av.%20Gabriel%20Corr%C3%AAa%20Pedrosa%2C%20398%20-%20Parque%20Dez%20de%20Novembro%2C%20Manaus%20-%20AM%2C%2069055-748%2C%20Brasil" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Ver rota no Google Maps</a>
+        </div>
+
+        <div class="map-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Av.%20Gabriel%20Corr%C3%AAa%20Pedrosa%2C%20398%20-%20Parque%20Dez%20de%20Novembro%2C%20Manaus%20-%20AM%2C%2069055-748%2C%20Brasil&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização da Clínica La Bella Estética no Google Maps">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo">La Bella <span>Estética</span></a>
+        <p>Harmonização facial e depilação a laser em Manaus, com atendimento humanizado, acessível e sem dor.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/dra.lorrenebarroco/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#" class="js-whatsapp-link" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.762.462 3.48 1.34 4.997l-1.42 5.19 5.312-1.394a9.96 9.96 0 0 0 4.765 1.214h.004c5.514 0 9.997-4.483 9.997-9.997s-4.483-9.997-9.997-9.997h-.004zm5.905 15.908a8.28 8.28 0 0 1-11.774 0 8.28 8.28 0 0 1 0-11.774 8.28 8.28 0 0 1 11.774 0 8.28 8.28 0 0 1 0 11.774z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">Perguntas Frequentes</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contato</h4>
+        <ul class="footer-links">
+          <li id="footerPhone">(92) 98182-2850</li>
+          <li>Av. Gabriel Corrêa Pedrosa, 398 – Parque Dez de Novembro, Manaus - AM</li>
+          <li>Seg. a Sáb. · 9h às 19h</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Clínica La Bella Estética. Todos os direitos reservados.</span>
+      <span>Dra. Lorrene Barroco · Manaus/AM</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BOTÃO FLUTUANTE DO WHATSAPP
+     ============================================================ -->
+<a href="#" class="whatsapp-float js-whatsapp-link" data-wa-message="geral" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.762.462 3.48 1.34 4.997l-1.42 5.19 5.312-1.394a9.96 9.96 0 0 0 4.765 1.214h.004c5.514 0 9.997-4.483 9.997-9.997s-4.483-9.997-9.997-9.997h-.004zm5.905 15.908a8.28 8.28 0 0 1-11.774 0 8.28 8.28 0 0 1 0-11.774 8.28 8.28 0 0 1 11.774 0 8.28 8.28 0 0 1 0 11.774z"/></svg>
+  <span class="wa-text">Fale no WhatsApp</span>
+</a>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÕES — edite apenas esta seção para atualizar
+   número de WhatsApp, telefone e mensagens padrão
+   ============================================================ */
+const CONFIG = {
+  whatsappNumber: "5592981822850", // +55 92 98182-2850
+  phone: "(92) 98182-2850",
+  messages: {
+    geral: "Olá! Vim pelo site e gostaria de saber mais sobre a Clínica La Bella Estética.",
+    agendar: "Olá! Gostaria de agendar uma avaliação na Clínica La Bella Estética."
+  }
+};
+
+// Monta os links do WhatsApp em todos os botões marcados com .js-whatsapp-link
+document.querySelectorAll(".js-whatsapp-link").forEach((el) => {
+  const key = el.dataset.waMessage || "geral";
+  const text = encodeURIComponent(CONFIG.messages[key] || CONFIG.messages.geral);
+  el.setAttribute("href", `https://wa.me/${CONFIG.whatsappNumber}?text=${text}`);
+  el.setAttribute("target", "_blank");
+  el.setAttribute("rel", "noopener noreferrer");
+});
+
+document.getElementById("footerPhone").textContent = CONFIG.phone;
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* ============================================================
+   HEADER — sombra ao rolar
+   ============================================================ */
+const header = document.getElementById("siteHeader");
+window.addEventListener("scroll", () => {
+  header.classList.toggle("is-scrolled", window.scrollY > 12);
+}, { passive: true });
+
+/* ============================================================
+   MENU MOBILE
+   ============================================================ */
+const navToggle = document.getElementById("navToggle");
+const siteNav = document.getElementById("siteNav");
+
+navToggle.addEventListener("click", () => {
+  const isOpen = siteNav.classList.toggle("is-open");
+  navToggle.classList.toggle("is-open", isOpen);
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+});
+
+siteNav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    siteNav.classList.remove("is-open");
+    navToggle.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+/* ============================================================
+   ABAS DE SERVIÇOS
+   ============================================================ */
+document.querySelectorAll(".tab-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach((b) => b.setAttribute("aria-selected", "false"));
+    document.querySelectorAll(".service-panel").forEach((p) => p.classList.remove("is-active"));
+
+    btn.setAttribute("aria-selected", "true");
+    document.getElementById(btn.dataset.panel).classList.add("is-active");
+  });
+});
+
+/* ============================================================
+   FAQ (accordion)
+   ============================================================ */
+document.querySelectorAll(".faq-item").forEach((item) => {
+  const question = item.querySelector(".faq-question");
+  const answer = item.querySelector(".faq-answer");
+
+  const setState = (open) => {
+    item.classList.toggle("is-open", open);
+    answer.style.maxHeight = open ? answer.scrollHeight + "px" : "0px";
+  };
+
+  setState(item.classList.contains("is-open"));
+
+  question.addEventListener("click", () => {
+    const willOpen = !item.classList.contains("is-open");
+    document.querySelectorAll(".faq-item").forEach((el) => setState(false));
+    setState(willOpen);
+  });
+});
+
+/* ============================================================
+   GRÁFICO RADAR — Diferenciais
+   ============================================================ */
+const ctx = document.getElementById("diffChart");
+if (ctx && window.Chart) {
+  new Chart(ctx, {
+    type: "radar",
+    data: {
+      labels: ["Atendimento\nHumanizado", "Tecnologia", "Conforto", "Acessibilidade", "Ambiente", "Agilidade"],
+      datasets: [
+        {
+          label: "La Bella Estética",
+          data: [9.6, 9, 9.2, 9.4, 9.3, 8.8],
+          backgroundColor: "rgba(197, 155, 39, 0.22)",
+          borderColor: "#C59B27",
+          pointBackgroundColor: "#C59B27",
+          borderWidth: 2
+        },
+        {
+          label: "Clínica tradicional",
+          data: [6, 6.5, 5.5, 5, 6, 6.2],
+          backgroundColor: "rgba(61, 34, 21, 0.06)",
+          borderColor: "rgba(61, 34, 21, 0.35)",
+          pointBackgroundColor: "rgba(61, 34, 21, 0.5)",
+          borderWidth: 2
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        r: {
+          min: 0, max: 10,
+          ticks: { display: false },
+          grid: { color: "#E8D5CB" },
+          angleLines: { color: "#E8D5CB" },
+          pointLabels: {
+            color: "#754934",
+            font: { family: "'Plus Jakarta Sans', sans-serif", size: 12, weight: "600" }
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          position: "bottom",
+          labels: {
+            color: "#3D2215",
+            font: { family: "'Plus Jakarta Sans', sans-serif", size: 12 },
+            usePointStyle: true,
+            padding: 20
+          }
+        }
+      }
+    }
+  });
+}
+</script>
+
+</body>
+</html>
